@@ -1,8 +1,9 @@
 interface alu_bfm;
     import control_pkg::*;
-    // -------------------------
-    // BFM Signals
-    // -------------------------
+
+    command_monitor cmd_monitor_h;
+    result_monitor rslt_monitor_h;
+
     logic [31:0]  A;
     logic [31:0]  B;
     alu_op_e      Opcode;
@@ -32,6 +33,14 @@ interface alu_bfm;
         on = Neg;
         ov = Overflow;
     endtask : send_op
+
+    always @(posedge clk) begin : cmd_monitor
+        cmd_monitor_h.write_to_monitor(A, B, Opcode);
+    end : cmd_monitor
+
+    always @(negedge clk) begin : rslt_monitor
+        rslt_monitor_h.write_to_monitor(Q, Zero, Neg, Overflow);
+    end : rslt_monitor
 
 
 endinterface : alu_bfm

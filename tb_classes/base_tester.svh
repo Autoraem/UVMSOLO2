@@ -1,8 +1,4 @@
-`ifdef QUESTA
 virtual class base_tester extends uvm_component;
-`else
-class base_tester extends uvm_component;
-`endif
     `uvm_component_utils(base_tester)
 
     virtual alu_bfm bfm;

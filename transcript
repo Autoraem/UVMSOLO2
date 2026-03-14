@@ -1,6 +1,6 @@
 # do run.do
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 04:15:21 on Mar 07,2026
+# Start time: 00:42:52 on Mar 14,2026
 # vlog -sv -f dut.f 
 # -- Compiling package control_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -11,10 +11,10 @@
 # 
 # Top level modules:
 # 	alu
-# End time: 04:15:22 on Mar 07,2026, Elapsed time: 0:00:01
+# End time: 00:42:53 on Mar 14,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 04:15:22 on Mar 07,2026
+# Start time: 00:42:53 on Mar 14,2026
 # vlog -sv -f tb.f 
 # -- Compiling interface alu_bfm
 # -- Importing package control_pkg
@@ -24,10 +24,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 04:15:22 on Mar 07,2026, Elapsed time: 0:00:00
+# End time: 00:42:53 on Mar 14,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 04:15:22 on Mar 07,2026
+# Start time: 00:42:53 on Mar 14,2026
 # vopt top -o top_opt "+acc" "+cover=bcesf" 
 # 
 # Top level modules:
@@ -51,10 +51,10 @@
 # -- Optimizing module top(fast)
 # -- Optimizing interface alu_bfm(fast)
 # Optimized design name is top_opt
-# End time: 04:15:23 on Mar 07,2026, Elapsed time: 0:00:01
+# End time: 00:42:54 on Mar 14,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 # vsim top_opt -coverage "+UVM_TESTNAME=random_test" 
-# Start time: 04:15:23 on Mar 07,2026
+# Start time: 00:42:54 on Mar 14,2026
 # //  Questa Sim-64
 # //  Version 2021.1 win64 Jan 19 2021
 # //
@@ -103,8 +103,6 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test random_test...
-# ** Warning: (vsim-8315) No condition is true in the unique/priority if/case statement.
-#    Time: 11 ns  Iteration: 0  Process: /control_pkg::scoreboard::run_phase/self_checker/#implicit#unique__20 File: tb_classes/scoreboard.svh Line: 20
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200110: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
@@ -123,10 +121,10 @@
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Stopped at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# End time: 04:15:37 on Mar 07,2026, Elapsed time: 0:00:14
-# Errors: 0, Warnings: 1
+# End time: 00:43:09 on Mar 14,2026, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 0
 # vsim top_opt -coverage "+UVM_TESTNAME=add_test" 
-# Start time: 04:15:37 on Mar 07,2026
+# Start time: 00:43:09 on Mar 14,2026
 # Loading sv_std.std
 # Loading work.alu_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -161,8 +159,6 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test add_test...
-# ** Warning: (vsim-8315) No condition is true in the unique/priority if/case statement.
-#    Time: 11 ns  Iteration: 0  Process: /control_pkg::scoreboard::run_phase/self_checker/#implicit#unique__20 File: tb_classes/scoreboard.svh Line: 20
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200110: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
@@ -182,17 +178,17 @@
 # Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Stopped at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
-# Start time: 04:15:43 on Mar 07,2026
+# Start time: 00:43:15 on Mar 14,2026
 # vcover merge alu.ucdb random_test.ucdb add_test.ucdb 
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
 # Merging file random_test.ucdb
 # Merging file add_test.ucdb
 # Writing merged result to alu.ucdb
 # 
-# End time: 04:15:43 on Mar 07,2026, Elapsed time: 0:00:00
+# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
-# Start time: 04:15:43 on Mar 07,2026
+# Start time: 00:43:15 on Mar 14,2026
 # vcover report alu.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -240,14 +236,14 @@
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5088          1          -    Covered              
+#         bin zeros                                        5090          1          -    Covered              
 #         bin others                                       9989          1          -    Covered              
 #         bin ones                                         4933          1          -    Covered              
 #     Coverpoint b_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5003          1          -    Covered              
+#         bin zeros                                        5005          1          -    Covered              
 #         bin others                                      10022          1          -    Covered              
 #         bin ones                                         4985          1          -    Covered              
 #     Cross op_00_FF                                    100.00%        100          -    Covered              
@@ -314,14 +310,14 @@
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5088          1          -    Covered              
+#         bin zeros                                        5090          1          -    Covered              
 #         bin others                                       9989          1          -    Covered              
 #         bin ones                                         4933          1          -    Covered              
 #     Coverpoint b_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5003          1          -    Covered              
+#         bin zeros                                        5005          1          -    Covered              
 #         bin others                                      10022          1          -    Covered              
 #         bin ones                                         4985          1          -    Covered              
 #     Cross op_00_FF                                    100.00%        100          -    Covered              
@@ -356,7 +352,7 @@
 # 
 # Total Coverage By Instance (filtered view): 100.00%
 # 
-# End time: 04:15:43 on Mar 07,2026, Elapsed time: 0:00:00
+# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 04:15:43 on Mar 07,2026, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 1
+# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0

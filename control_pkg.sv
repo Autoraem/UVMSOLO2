@@ -14,6 +14,20 @@ package control_pkg;
         ALU_SLTU
     } alu_op_e;
 
+    typedef struct {
+        logic [31:0] A;
+        logic [31:0] B;
+        alu_op_e     Opcode;
+    } command_data;
+
+     typedef struct {
+        logic [31:0]  Q;
+        logic         Zero;
+        logic         Neg;
+        logic         Overflow;
+    } result_data;
+
+
     virtual alu_bfm bfm_g;
 
     `include "coverage.svh"
@@ -21,7 +35,11 @@ package control_pkg;
     `include "random_tester.svh"
     `include "add_tester.svh"
     `include "scoreboard.svh"
+    `include "command_monitor.svh"
+    `include "result_monitor.svh"
+
     `include "env.svh"
+
     `include "random_test.svh"
     `include "add_test.svh"
     
