@@ -34,6 +34,7 @@ package control_pkg;
     `include "base_tester.svh"
     `include "random_tester.svh"
     `include "add_tester.svh"
+    `include "driver.svh"
     `include "scoreboard.svh"
     `include "command_monitor.svh"
     `include "result_monitor.svh"

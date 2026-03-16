@@ -1,6 +1,6 @@
 # do run.do
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 00:42:52 on Mar 14,2026
+# Start time: 15:40:38 on Mar 16,2026
 # vlog -sv -f dut.f 
 # -- Compiling package control_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -11,10 +11,10 @@
 # 
 # Top level modules:
 # 	alu
-# End time: 00:42:53 on Mar 14,2026, Elapsed time: 0:00:01
+# End time: 15:40:38 on Mar 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 00:42:53 on Mar 14,2026
+# Start time: 15:40:38 on Mar 16,2026
 # vlog -sv -f tb.f 
 # -- Compiling interface alu_bfm
 # -- Importing package control_pkg
@@ -24,10 +24,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 00:42:53 on Mar 14,2026, Elapsed time: 0:00:00
+# End time: 15:40:38 on Mar 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 00:42:53 on Mar 14,2026
+# Start time: 15:40:38 on Mar 16,2026
 # vopt top -o top_opt "+acc" "+cover=bcesf" 
 # 
 # Top level modules:
@@ -51,10 +51,10 @@
 # -- Optimizing module top(fast)
 # -- Optimizing interface alu_bfm(fast)
 # Optimized design name is top_opt
-# End time: 00:42:54 on Mar 14,2026, Elapsed time: 0:00:01
+# End time: 15:40:39 on Mar 16,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 # vsim top_opt -coverage "+UVM_TESTNAME=random_test" 
-# Start time: 00:42:54 on Mar 14,2026
+# Start time: 15:40:39 on Mar 16,2026
 # //  Questa Sim-64
 # //  Version 2021.1 win64 Jan 19 2021
 # //
@@ -103,7 +103,7 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test random_test...
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200110: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200070: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
@@ -117,14 +117,14 @@
 # [RNTST]     1
 # [TEST_DONE]     1
 # ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 200110 ns  Iteration: 56  Instance: /top
+#    Time: 200070 ns  Iteration: 56  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Stopped at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# End time: 00:43:09 on Mar 14,2026, Elapsed time: 0:00:15
+# End time: 15:40:53 on Mar 16,2026, Elapsed time: 0:00:14
 # Errors: 0, Warnings: 0
 # vsim top_opt -coverage "+UVM_TESTNAME=add_test" 
-# Start time: 00:43:09 on Mar 14,2026
+# Start time: 15:40:53 on Mar 16,2026
 # Loading sv_std.std
 # Loading work.alu_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -159,7 +159,7 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test add_test...
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200110: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200070: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
@@ -173,22 +173,22 @@
 # [RNTST]     1
 # [TEST_DONE]     1
 # ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 200110 ns  Iteration: 56  Instance: /top
+#    Time: 200070 ns  Iteration: 56  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Stopped at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
-# Start time: 00:43:15 on Mar 14,2026
+# Start time: 15:40:59 on Mar 16,2026
 # vcover merge alu.ucdb random_test.ucdb add_test.ucdb 
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
 # Merging file random_test.ucdb
 # Merging file add_test.ucdb
 # Writing merged result to alu.ucdb
 # 
-# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:00
+# End time: 15:40:59 on Mar 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
-# Start time: 00:43:15 on Mar 14,2026
+# Start time: 15:40:59 on Mar 16,2026
 # vcover report alu.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -213,7 +213,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin ops                                         20010          1          -    Covered              
+#         bin ops                                         20006          1          -    Covered              
 #  TYPE /control_pkg/coverage/operands                  100.00%        100          -    Covered              
 #     covered/total bins:                                    36         36          -                      
 #     missing/total bins:                                     0         36          -                      
@@ -222,57 +222,57 @@
 #         covered/total bins:                                10         10          -                      
 #         missing/total bins:                                 0         10          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin add                                         10933          1          -    Covered              
-#         bin sub                                           994          1          -    Covered              
-#         bin and_                                          983          1          -    Covered              
-#         bin or_                                          1045          1          -    Covered              
-#         bin xor_                                         1057          1          -    Covered              
-#         bin sll                                          1025          1          -    Covered              
+#         bin add                                         11073          1          -    Covered              
+#         bin sub                                           959          1          -    Covered              
+#         bin and_                                          998          1          -    Covered              
+#         bin or_                                           984          1          -    Covered              
+#         bin xor_                                         1002          1          -    Covered              
+#         bin sll                                           950          1          -    Covered              
 #         bin srl                                          1024          1          -    Covered              
-#         bin sra                                          1002          1          -    Covered              
-#         bin slt                                           987          1          -    Covered              
-#         bin sltu                                          960          1          -    Covered              
+#         bin sra                                          1030          1          -    Covered              
+#         bin slt                                           970          1          -    Covered              
+#         bin sltu                                         1016          1          -    Covered              
 #     Coverpoint a_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5090          1          -    Covered              
-#         bin others                                       9989          1          -    Covered              
-#         bin ones                                         4933          1          -    Covered              
+#         bin zeros                                        5166          1          -    Covered              
+#         bin others                                       9801          1          -    Covered              
+#         bin ones                                         5041          1          -    Covered              
 #     Coverpoint b_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5005          1          -    Covered              
-#         bin others                                      10022          1          -    Covered              
-#         bin ones                                         4985          1          -    Covered              
+#         bin zeros                                        5000          1          -    Covered              
+#         bin others                                      10032          1          -    Covered              
+#         bin ones                                         4976          1          -    Covered              
 #     Cross op_00_FF                                    100.00%        100          -    Covered              
 #         covered/total bins:                                20         20          -                      
 #         missing/total bins:                                 0         20          -                      
 #         % Hit:                                        100.00%        100          -                      
 #         Auto, Default and User Defined Bins:
-#             bin add_00                                   4891          1          -    Covered              
-#             bin add_FF                                   4772          1          -    Covered              
-#             bin sub_00                                    434          1          -    Covered              
-#             bin sub_FF                                    432          1          -    Covered              
-#             bin and_00                                    397          1          -    Covered              
-#             bin and_FF                                    433          1          -    Covered              
-#             bin or_00                                     446          1          -    Covered              
-#             bin or_FF                                     461          1          -    Covered              
-#             bin xor_00                                    457          1          -    Covered              
-#             bin xor_FF                                    466          1          -    Covered              
-#             bin sll_00                                    462          1          -    Covered              
-#             bin sll_FF                                    439          1          -    Covered              
-#             bin srl_00                                    446          1          -    Covered              
-#             bin srl_FF                                    439          1          -    Covered              
-#             bin sra_00                                    470          1          -    Covered              
-#             bin sra_FF                                    428          1          -    Covered              
-#             bin slt_00                                    443          1          -    Covered              
-#             bin slt_FF                                    426          1          -    Covered              
-#             bin sltu_00                                   420          1          -    Covered              
-#             bin sltu_FF                                   410          1          -    Covered              
+#             bin add_00                                   4968          1          -    Covered              
+#             bin add_FF                                   4856          1          -    Covered              
+#             bin sub_00                                    423          1          -    Covered              
+#             bin sub_FF                                    435          1          -    Covered              
+#             bin and_00                                    446          1          -    Covered              
+#             bin and_FF                                    439          1          -    Covered              
+#             bin or_00                                     448          1          -    Covered              
+#             bin or_FF                                     418          1          -    Covered              
+#             bin xor_00                                    445          1          -    Covered              
+#             bin xor_FF                                    441          1          -    Covered              
+#             bin sll_00                                    406          1          -    Covered              
+#             bin sll_FF                                    431          1          -    Covered              
+#             bin srl_00                                    466          1          -    Covered              
+#             bin srl_FF                                    456          1          -    Covered              
+#             bin sra_00                                    429          1          -    Covered              
+#             bin sra_FF                                    460          1          -    Covered              
+#             bin slt_00                                    448          1          -    Covered              
+#             bin slt_FF                                    397          1          -    Covered              
+#             bin sltu_00                                   455          1          -    Covered              
+#             bin sltu_FF                                   463          1          -    Covered              
 #         Illegal and Ignore Bins:
-#             ignore_bin others_only                       5002                     -    Occurred             
+#             ignore_bin others_only                       4885                     -    Occurred             
 # 
 # COVERGROUP COVERAGE:
 # ----------------------------------------------------------------------------------------------------------
@@ -287,7 +287,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin ops                                         20010          1          -    Covered              
+#         bin ops                                         20006          1          -    Covered              
 #  TYPE /control_pkg/coverage/operands                  100.00%        100          -    Covered              
 #     covered/total bins:                                    36         36          -                      
 #     missing/total bins:                                     0         36          -                      
@@ -296,63 +296,63 @@
 #         covered/total bins:                                10         10          -                      
 #         missing/total bins:                                 0         10          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin add                                         10933          1          -    Covered              
-#         bin sub                                           994          1          -    Covered              
-#         bin and_                                          983          1          -    Covered              
-#         bin or_                                          1045          1          -    Covered              
-#         bin xor_                                         1057          1          -    Covered              
-#         bin sll                                          1025          1          -    Covered              
+#         bin add                                         11073          1          -    Covered              
+#         bin sub                                           959          1          -    Covered              
+#         bin and_                                          998          1          -    Covered              
+#         bin or_                                           984          1          -    Covered              
+#         bin xor_                                         1002          1          -    Covered              
+#         bin sll                                           950          1          -    Covered              
 #         bin srl                                          1024          1          -    Covered              
-#         bin sra                                          1002          1          -    Covered              
-#         bin slt                                           987          1          -    Covered              
-#         bin sltu                                          960          1          -    Covered              
+#         bin sra                                          1030          1          -    Covered              
+#         bin slt                                           970          1          -    Covered              
+#         bin sltu                                         1016          1          -    Covered              
 #     Coverpoint a_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5090          1          -    Covered              
-#         bin others                                       9989          1          -    Covered              
-#         bin ones                                         4933          1          -    Covered              
+#         bin zeros                                        5166          1          -    Covered              
+#         bin others                                       9801          1          -    Covered              
+#         bin ones                                         5041          1          -    Covered              
 #     Coverpoint b_leg                                  100.00%        100          -    Covered              
 #         covered/total bins:                                 3          3          -                      
 #         missing/total bins:                                 0          3          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin zeros                                        5005          1          -    Covered              
-#         bin others                                      10022          1          -    Covered              
-#         bin ones                                         4985          1          -    Covered              
+#         bin zeros                                        5000          1          -    Covered              
+#         bin others                                      10032          1          -    Covered              
+#         bin ones                                         4976          1          -    Covered              
 #     Cross op_00_FF                                    100.00%        100          -    Covered              
 #         covered/total bins:                                20         20          -                      
 #         missing/total bins:                                 0         20          -                      
 #         % Hit:                                        100.00%        100          -                      
 #         Auto, Default and User Defined Bins:
-#             bin add_00                                   4891          1          -    Covered              
-#             bin add_FF                                   4772          1          -    Covered              
-#             bin sub_00                                    434          1          -    Covered              
-#             bin sub_FF                                    432          1          -    Covered              
-#             bin and_00                                    397          1          -    Covered              
-#             bin and_FF                                    433          1          -    Covered              
-#             bin or_00                                     446          1          -    Covered              
-#             bin or_FF                                     461          1          -    Covered              
-#             bin xor_00                                    457          1          -    Covered              
-#             bin xor_FF                                    466          1          -    Covered              
-#             bin sll_00                                    462          1          -    Covered              
-#             bin sll_FF                                    439          1          -    Covered              
-#             bin srl_00                                    446          1          -    Covered              
-#             bin srl_FF                                    439          1          -    Covered              
-#             bin sra_00                                    470          1          -    Covered              
-#             bin sra_FF                                    428          1          -    Covered              
-#             bin slt_00                                    443          1          -    Covered              
-#             bin slt_FF                                    426          1          -    Covered              
-#             bin sltu_00                                   420          1          -    Covered              
-#             bin sltu_FF                                   410          1          -    Covered              
+#             bin add_00                                   4968          1          -    Covered              
+#             bin add_FF                                   4856          1          -    Covered              
+#             bin sub_00                                    423          1          -    Covered              
+#             bin sub_FF                                    435          1          -    Covered              
+#             bin and_00                                    446          1          -    Covered              
+#             bin and_FF                                    439          1          -    Covered              
+#             bin or_00                                     448          1          -    Covered              
+#             bin or_FF                                     418          1          -    Covered              
+#             bin xor_00                                    445          1          -    Covered              
+#             bin xor_FF                                    441          1          -    Covered              
+#             bin sll_00                                    406          1          -    Covered              
+#             bin sll_FF                                    431          1          -    Covered              
+#             bin srl_00                                    466          1          -    Covered              
+#             bin srl_FF                                    456          1          -    Covered              
+#             bin sra_00                                    429          1          -    Covered              
+#             bin sra_FF                                    460          1          -    Covered              
+#             bin slt_00                                    448          1          -    Covered              
+#             bin slt_FF                                    397          1          -    Covered              
+#             bin sltu_00                                   455          1          -    Covered              
+#             bin sltu_FF                                   463          1          -    Covered              
 #         Illegal and Ignore Bins:
-#             ignore_bin others_only                       5002                     -    Occurred             
+#             ignore_bin others_only                       4885                     -    Occurred             
 # 
 # TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
 # 
 # Total Coverage By Instance (filtered view): 100.00%
 # 
-# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:00
+# End time: 15:40:59 on Mar 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 00:43:15 on Mar 14,2026, Elapsed time: 0:00:06
+# End time: 15:40:59 on Mar 16,2026, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
