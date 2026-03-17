@@ -9,27 +9,36 @@ vlog -sv -f tb.f
 vopt top -o top_opt +acc +cover=bcesf
 
 # Simulate 
-vsim top_opt -coverage +UVM_TESTNAME=random_test
+vsim top_opt -coverage +UVM_TESTNAME=fibonacci_test
 set NoQuitOnFinish 1
 onbreak {resume}
 log /* -r
 run -all
 # Save coverage database
-coverage save random_test.ucdb
+coverage save fibonacci_test.ucdb
 
 
 # Simulate 
-vsim top_opt -coverage +UVM_TESTNAME=add_test
+vsim top_opt -coverage +UVM_TESTNAME=parallel_test 
 set NoQuitOnFinish 1
 onbreak {resume}
 log /* -r
 run -all
 # Save coverage database
-coverage save add_test.ucdb
+coverage save parallel_test.ucdb
+
+# Simulate 
+vsim top_opt -coverage +UVM_TESTNAME=full_test 
+set NoQuitOnFinish 1
+onbreak {resume}
+log /* -r
+run -all
+# Save coverage database
+coverage save full_test.ucdb
 
 
 # Coverage reports
-vcover merge alu.ucdb random_test.ucdb add_test.ucdb
+vcover merge alu.ucdb fibonacci_test.ucdb parallel_test.ucdb full_test.ucdb
 vcover report alu.ucdb -cvg -details
 
 

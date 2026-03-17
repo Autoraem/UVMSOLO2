@@ -1,4 +1,4 @@
-class coverage extends uvm_subscriber #(command_transaction);
+class coverage extends uvm_subscriber #(sequence_item);
     `uvm_component_utils(coverage)
 
     virtual alu_bfm bfm;
@@ -74,7 +74,7 @@ class coverage extends uvm_subscriber #(command_transaction);
         operands = new();
     endfunction : new
 
-    function void write(command_transaction t);
+    function void write( sequence_item t);
         A = t.A;
         B = t.B;
         Opcode = t.Opcode;

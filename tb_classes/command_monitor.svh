@@ -3,7 +3,7 @@ class command_monitor extends uvm_component;
 
     virtual alu_bfm bfm;
 
-    uvm_analysis_port #(command_transaction) ap;
+    uvm_analysis_port #(sequence_item) ap;
 
     function void build_phase(uvm_phase phase);
         if(!uvm_config_db#(virtual alu_bfm)::get(null, "", "bfm", bfm)) 
@@ -13,7 +13,7 @@ class command_monitor extends uvm_component;
     endfunction : build_phase
 
     function void write_to_monitor(logic [31:0] A, logic [31:0] B, alu_op_e Opcode);
-        command_transaction cmd;
+        sequence_item cmd;
         `uvm_info("CMD_MONITOR", $sformatf("Monitoring command: A:%0h B:%0h Opcode:%s", A, B, Opcode.name()), UVM_HIGH);
         cmd = new("cmd");
         cmd.A = A;

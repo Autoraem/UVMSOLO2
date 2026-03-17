@@ -1,7 +1,7 @@
 class scoreboard extends uvm_component;
     `uvm_component_utils(scoreboard)
 
-    uvm_tlm_analysis_fifo #(command_transaction) cmd_fifo;
+    uvm_tlm_analysis_fifo #(sequence_item) cmd_fifo;
     uvm_tlm_analysis_fifo #(result_transaction) rslt_fifo;
 
     function new (string name, uvm_component parent);
@@ -13,7 +13,7 @@ class scoreboard extends uvm_component;
         rslt_fifo = new("rslt_fifo", this);
     endfunction : build_phase
 
-    function result_transaction predict_result(command_transaction cmd);
+    function result_transaction predict_result(sequence_item cmd);
         result_transaction predicted;
         predicted = new("predicted_result");
         unique case (cmd.Opcode)
@@ -37,7 +37,7 @@ class scoreboard extends uvm_component;
 
     function void write(result_transaction t);
         string data_str;
-        command_transaction cmd;
+        sequence_item cmd;
         result_transaction rslt;
 
         if(!cmd_fifo.try_get(cmd) || !rslt_fifo.try_get(rslt))
