@@ -3,7 +3,7 @@ class driver extends uvm_component;
 
     virtual alu_bfm bfm;
 
-    uvm_get_port #(command_data) cmd_port;
+    uvm_get_port #(command_transaction) cmd_port;
 
     function void build_phase(uvm_phase phase);
         if(!uvm_config_db#(virtual alu_bfm)::get(this, "", "bfm", bfm)) begin
@@ -13,8 +13,11 @@ class driver extends uvm_component;
     endfunction : build_phase
 
     task run_phase(uvm_phase phase);
-        command_data cmd;
-        result_data rslt;
+        command_transaction cmd;
+        result_transaction rslt;
+        cmd = new("cmd");
+        rslt = new("rslt");
+
         forever begin : command_loop
             cmd_port.get(cmd);
             bfm.send_op(cmd.Opcode, cmd.A, cmd.B, rslt.Q, rslt.Zero, rslt.Neg, rslt.Overflow);

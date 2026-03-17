@@ -1,11 +1,9 @@
 class add_test extends random_test;
     `uvm_component_utils(add_test)
     
-    env env_h;
-
     function void build_phase(uvm_phase phase);
-        base_tester::type_id::set_type_override(add_tester::get_type());
-        env_h = env::type_id::create("env_h", this);
+        command_transaction::type_id::set_type_override(add_transaction::get_type());
+        super.build_phase(phase);
     endfunction : build_phase
 
     function new (string name, uvm_component parent);

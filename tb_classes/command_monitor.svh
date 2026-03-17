@@ -1,21 +1,21 @@
 class command_monitor extends uvm_component;
     `uvm_component_utils(command_monitor)
 
-    uvm_analysis_port #(command_data) ap;
+    virtual alu_bfm bfm;
+
+    uvm_analysis_port #(command_transaction) ap;
 
     function void build_phase(uvm_phase phase);
-        virtual alu_bfm bfm;
-
         if(!uvm_config_db#(virtual alu_bfm)::get(null, "", "bfm", bfm)) 
-            $fatal("Failed to get BFM");
-
+            `uvm_fatal("Command Monitor", "BFM not found in config DB");
         bfm.cmd_monitor_h = this;
-
         ap = new("ap", this);
     endfunction : build_phase
 
     function void write_to_monitor(logic [31:0] A, logic [31:0] B, alu_op_e Opcode);
-        command_data cmd;
+        command_transaction cmd;
+        `uvm_info("CMD_MONITOR", $sformatf("Monitoring command: A:%0h B:%0h Opcode:%s", A, B, Opcode.name()), UVM_HIGH);
+        cmd = new("cmd");
         cmd.A = A;
         cmd.B = B;
         cmd.Opcode = Opcode;

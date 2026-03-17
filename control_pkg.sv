@@ -14,26 +14,12 @@ package control_pkg;
         ALU_SLTU
     } alu_op_e;
 
-    typedef struct {
-        logic [31:0] A;
-        logic [31:0] B;
-        alu_op_e     Opcode;
-    } command_data;
-
-     typedef struct {
-        logic [31:0]  Q;
-        logic         Zero;
-        logic         Neg;
-        logic         Overflow;
-    } result_data;
-
-
-    virtual alu_bfm bfm_g;
+    `include "command_transaction.svh"
+    `include "add_transaction.svh"
+    `include "result_transaction.svh"
 
     `include "coverage.svh"
-    `include "base_tester.svh"
-    `include "random_tester.svh"
-    `include "add_tester.svh"
+    `include "tester.svh"
     `include "driver.svh"
     `include "scoreboard.svh"
     `include "command_monitor.svh"
